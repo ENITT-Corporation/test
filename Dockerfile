@@ -1,3 +1,4 @@
 FROM fedora
-ENTRYPOINT /usr/local/bin
-CMD tty_gps
+COPY . /usr/local/bin/suncall
+ENTRYPOINT /usr/local/bin/suncall/tty_gps /dev/ttyUSB0 115200
+
