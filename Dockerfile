@@ -7,8 +7,6 @@ COPY ./command.sh /usr/local/bin/command.sh
 RUN chmod 777 /usr/local/bin/iiot_gw
 RUN chmod 777 /usr/local/bin/iiot_hdms
 RUN chmod 777 /usr/local/bin/command.sh
-RUN apt-get install -y curl
-RUN apt-get install -y libjasson4
 ENTRYPOINT ["/bin/bash"]
 
 CMD ["command.sh"]
